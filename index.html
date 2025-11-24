@@ -3,64 +3,93 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Great Barrier Reef</title>
+    <title>HTML Learning Project</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="images/favicon.ico" />
 </head>
 <body>
     <div id="background"></div>
 
-<header>
-    <div class="nav-wrapper">
-        <div class="brand-name">Great Barrier Reef</div>
+    <header>
+        <div class="nav-wrapper">
+            <div class="brand-name">HTML Learning Project</div>
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html"><span>Home</span></a></li>
+                    <li><a href="about.html"><span>About</span></a></li>
+                    <li><a href="contact.html"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <nav aria-label="Primary">
-            <ul>
-                <li><a href="about.html"><span>About</span></a></li>
-                <li><a href="contact/contact.html"><span>Contact</span></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-    <section id="home" class="banner" aria-label="Site banner">
-        <div class="slideshow">
-            <img src="images/Banner1.png" alt="group assignment banner" class="active">
+    <section class="hero" aria-label="Hero">
+        <img src="images/hero-banner.jpg" alt="Hero Banner">
+        <div class="hero-overlay">
+            <h2>Team Project Showcase</h2>
         </div>
     </section>
 
-    <section aria-labelledby="info" class="info">
-        <h2 id="info">GREAT BARRIER REEF</h2>
-        <p>
-            Great Barrier Reef, complex of coral reefs, shoals, and islets in the Pacific Ocean off the northeastern coast of Australia that is the longest and largest reef complex in the world. 
-            The Great Barrier Reef extends in roughly a northwest-southeast direction for more than 1,250 miles (2,000 km), at an offshore distance ranging from 10 to 100 miles (16 to 160 km), 
-            and its width ranges from 37 to 155 miles (60 to 250 km). The Great Barrier Reef has an area of some 135,000 square miles (350,000 square km), and it has been characterized, somewhat 
-            inaccurately, as the largest structure ever built by living creatures.
-        </p>
-
-        <p>
-            The reef actually consists of some 2,100 individual reefs and some 800 fringing reefs (formed around islands or bordering coastlines). Many are dry or barely awash at low tide; 
-            some have islands of coral sand, or cays; and others fringe high islands or the mainland coast. In spite of this variety, the reefs share a common origin: each has been formed, 
-            over millions of years, from the skeletons and skeletal waste of a mass of living marine organisms. The “bricks” in the reef framework are formed by the calcareous remains of the 
-            tiny creatures known as coral polyps and hydrocorals, while the “cement” that binds these remains together is formed in large part by coralline algae and bryozoans. The interstices 
-            of this framework have been filled in by vast quantities of skeletal waste produced by the pounding of the waves and the depredations of boring organisms.
-        </p>
+    <section id="home" class="banner" aria-label="Site banner">
+        <div class="slideshow">
+            <img src="images/Banner1.png" alt="HTML learning banner" class="active">
+        </div>
     </section>
 
+    <main>
+        <section aria-labelledby="info" class="info">
+            <h2 id="info">HTML, CSS, and JavaScript</h2>
+            <p>
+                This project is a hands-on exercise in building a small website while applying lessons from class.
+                We focused on semantic HTML, modular CSS, responsive layout techniques like Grid and Flexbox, accessible forms, and basic JavaScript for interactivity.
+            </p>
+            <p>
+                HTML gives the structure, CSS controls layout and appearance, and JavaScript adds behavior. Organizing files and using clear naming conventions made teamwork easier and debugging faster.
+            </p>
+        </section>
 
-   
+        <section class="video-section" aria-labelledby="video-heading">
+            <h2 id="video-heading">Project Intro Video</h2>
+            <video controls poster="images/image.jpg" aria-describedby="video-desc">
+                <source src="media/media.mp4" type="video/mp4">
+            </video>
+            <p id="video-desc">Short demo showing our site structure and core features.</p>
+        </section>
+
+        <section class="contact-preview" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact</h2>
+            <form id="contact-form" action="#" method="post" novalidate>
+                <fieldset>
+                    <legend>Contact Information</legend>
+
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required aria-required="true" minlength="2">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit">Send Message</button>
+                </fieldset>
+            </form>
+            <p class="form-note">All fields are required. Client-side validation will check email format and required values before submission.</p>
+        </section>
     </main>
 
     <footer>
         <p class="footer-links" style="margin-top:10px;">
-          <a href="about.html">about</a>
-          <a href="contact.html">contact</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </p>
-        <p>&copy; <span id="year"></span> Group assignment</p>
+        <p>&copy; <span id="year"></span> Group Assignment</p>
     </footer>
-    
-<script src="javascript/java.js"></script>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
